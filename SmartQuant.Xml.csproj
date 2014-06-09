@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0164FF61-B32E-4F55-9141-F0EE616AEFB9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>SmartQuant.Xml</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ApplicationVersion>1.0.5016.23041</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SmartQuant\Xml\XmlNodeBase.cs" />
+    <Compile Include="SmartQuant\Xml\ValueXmlNode.cs" />
+    <Compile Include="SmartQuant\Xml\BooleanValueXmlNode.cs" />
+    <Compile Include="SmartQuant\Xml\ByteValueXmlNode.cs" />
+    <Compile Include="SmartQuant\Xml\DateTimeValueXmlNode.cs" />
+    <Compile Include="SmartQuant\Xml\DecimalValueXmlNode.cs" />
+    <Compile Include="SmartQuant\Xml\DoubleValueXmlNode.cs" />
+    <Compile Include="SmartQuant\Xml\FloatValueXmlNode.cs" />
+    <Compile Include="SmartQuant\Xml\GuidValueXmlNode.cs" />
+    <Compile Include="SmartQuant\Xml\Int16ValueXmlNode.cs" />
+    <Compile Include="SmartQuant\Xml\Int32ValueXmlNode.cs" />
+    <Compile Include="SmartQuant\Xml\Int64ValueXmlNode.cs" />
+    <Compile Include="SmartQuant\Xml\PropertyListXmlNode.cs" />
+    <Compile Include="SmartQuant\Xml\PropertyXmlNode.cs" />
+    <Compile Include="SmartQuant\Xml\StringValueXmlNode.cs" />
+    <Compile Include="SmartQuant\Xml\TypeValueXmlNode.cs" />
+    <Compile Include="SmartQuant\Xml\XmlDocumentBase.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="SmartQuant\Xml\EnumValueXmlNode.cs" />
+    <Compile Include="SmartQuant\Xml\ListXmlNode.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

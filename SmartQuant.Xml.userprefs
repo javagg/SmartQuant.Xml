@@ -1,0 +1,30 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SmartQuant\Xml\XmlNodeBase.cs">
+    <Files>
+      <File FileName="SmartQuant\Xml\XmlNodeBase.cs" Line="4" Column="18" />
+      <File FileName="SmartQuant\Xml\XmlDocumentBase.cs" Line="287" Column="6" />
+      <File FileName="SmartQuant\Xml\BooleanValueXmlNode.cs" Line="21" Column="1" />
+      <File FileName="SmartQuant\Xml\ByteValueXmlNode.cs" Line="20" Column="1" />
+      <File FileName="SmartQuant\Xml\DateTimeValueXmlNode.cs" Line="23" Column="1" />
+      <File FileName="SmartQuant\Xml\DecimalValueXmlNode.cs" Line="22" Column="1" />
+      <File FileName="SmartQuant\Xml\DoubleValueXmlNode.cs" Line="19" Column="1" />
+      <File FileName="SmartQuant\Xml\EnumValueXmlNode.cs" Line="20" Column="1" />
+      <File FileName="SmartQuant\Xml\FloatValueXmlNode.cs" Line="20" Column="1" />
+      <File FileName="SmartQuant\Xml\GuidValueXmlNode.cs" Line="22" Column="1" />
+      <File FileName="SmartQuant\Xml\Int16ValueXmlNode.cs" Line="21" Column="9" />
+      <File FileName="SmartQuant\Xml\Int32ValueXmlNode.cs" Line="19" Column="1" />
+      <File FileName="SmartQuant\Xml\Int64ValueXmlNode.cs" Line="19" Column="1" />
+      <File FileName="SmartQuant\Xml\ListXmlNode.cs" Line="7" Column="1" />
+      <File FileName="SmartQuant\Xml\PropertyListXmlNode.cs" Line="18" Column="1" />
+      <File FileName="SmartQuant\Xml\PropertyXmlNode.cs" Line="54" Column="1" />
+      <File FileName="SmartQuant\Xml\StringValueXmlNode.cs" Line="17" Column="9" />
+      <File FileName="SmartQuant\Xml\TypeValueXmlNode.cs" Line="19" Column="9" />
+      <File FileName="SmartQuant\Xml\ValueXmlNode.cs" Line="14" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
