@@ -8,7 +8,7 @@ namespace SmartQuant.Xml
         {
             get
             {
-                return Vau4EkONyhQVGwxidg.hrqvXeKlE(40);
+				return "NodeName";
             }
         }
 
