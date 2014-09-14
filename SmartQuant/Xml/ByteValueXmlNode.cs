@@ -14,10 +14,6 @@
             }
         }
 
-        public ByteValueXmlNode()
-        {
-        }
-    
         public byte GetValue(byte defaultValue)
         {
             return this.GetByteValue(defaultValue);

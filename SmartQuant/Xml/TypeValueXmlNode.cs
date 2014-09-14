@@ -15,9 +15,5 @@ namespace SmartQuant.Xml
                 this.SetValue(value);
             }
         }
-
-        public TypeValueXmlNode()
-        {
-        }
     }
 }

@@ -13,9 +13,5 @@
                 this.SetValue(value);
             }
         }
-
-        public StringValueXmlNode()
-        {
-        }
     }
 }

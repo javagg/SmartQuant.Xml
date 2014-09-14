@@ -2,18 +2,14 @@
 {
     public class ValueXmlNode : XmlNodeBase
     {
-        internal string es5nsP0vG;
+        internal string nodeName;
 
         public override sealed string NodeName
         {
             get
             {
-                return this.es5nsP0vG;
+                return this.nodeName;
             }
-        }
-
-        public ValueXmlNode()
-        {
         }
     }
 }

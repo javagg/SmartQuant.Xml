@@ -8,21 +8,17 @@ namespace SmartQuant.Xml
         {
             get
             {
-				return "NodeName";
+                return "properties";
             }
-        }
-
-        public PropertyListXmlNode()
-        {
         }
 
         public PropertyXmlNode Add(string name, Type type, string value)
         {
-            PropertyXmlNode propertyXmlNode = this.AppendChildNode();
-            propertyXmlNode.Name = name;
-            propertyXmlNode.Type = type;
-            propertyXmlNode.Value = value;
-            return propertyXmlNode;
+            PropertyXmlNode node = this.AppendChildNode();
+            node.Name = name;
+            node.Type = type;
+            node.Value = value;
+            return node;
         }
     }
 }

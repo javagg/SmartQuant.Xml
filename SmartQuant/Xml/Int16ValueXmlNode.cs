@@ -13,10 +13,6 @@
                 this.SetValue(value);
             }
         }
-    
-        public Int16ValueXmlNode()
-        {
-        }
 
         public short GetValue(short defaultValue)
         {

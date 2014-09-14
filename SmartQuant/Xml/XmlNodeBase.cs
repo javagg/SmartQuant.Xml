@@ -7,26 +7,20 @@ namespace SmartQuant.Xml
 {
     public abstract class XmlNodeBase
     {
-        private XmlNode zDS78RZMS;
+        private XmlNode xmlNode;
 
         public abstract string NodeName { get; }
 
-    
-        protected XmlNodeBase()
-        {
-        }
-
-    
         public static implicit operator XmlNode(XmlNodeBase xmlNodeBase)
         {
-            return xmlNodeBase.zDS78RZMS;
+            return xmlNodeBase.xmlNode;
         }
 
     
         internal static T cg2X6kuxg<T>(XmlNode obj0) where T : XmlNodeBase, new()
         {
             T instance = Activator.CreateInstance<T>();
-            instance.zDS78RZMS = obj0;
+            instance.xmlNode = obj0;
             return instance;
         }
 
@@ -34,97 +28,97 @@ namespace SmartQuant.Xml
         internal static T fpeCaawxg<T>(XmlNode obj0, string obj1) where T : ValueXmlNode, new()
         {
             T instance = Activator.CreateInstance<T>();
-            instance.zDS78RZMS = obj0;
-            instance.es5nsP0vG = obj1;
+            instance.xmlNode = obj0;
+            instance.nodeName = obj1;
             return instance;
         }
 
     
         protected bool ContainsAttribute(string name)
         {
-            return this.zDS78RZMS.Attributes[name] != null;
+            return this.xmlNode.Attributes[name] != null;
         }
 
     
         protected string GetStringAttribute(string name)
         {
-            XmlAttribute xmlAttribute = this.zDS78RZMS.Attributes[name];
+            XmlAttribute xmlAttribute = this.xmlNode.Attributes[name];
             if (xmlAttribute != null)
                 return xmlAttribute.Value;
             else
-                return (string)null;
+                return null;
         }
 
     
         protected int GetInt32Attribute(string name)
         {
-            return int.Parse(this.GetStringAttribute(name), (IFormatProvider)CultureInfo.InvariantCulture);
+            return int.Parse(this.GetStringAttribute(name), CultureInfo.InvariantCulture);
         }
 
     
         protected uint GetUInt32Attribute(string name)
         {
-            return uint.Parse(this.GetStringAttribute(name), (IFormatProvider)CultureInfo.InvariantCulture);
+            return uint.Parse(this.GetStringAttribute(name), CultureInfo.InvariantCulture);
         }
 
     
         protected long GetInt64Attribute(string name)
         {
-            return long.Parse(this.GetStringAttribute(name), (IFormatProvider)CultureInfo.InvariantCulture);
+            return long.Parse(this.GetStringAttribute(name), CultureInfo.InvariantCulture);
         }
 
     
         protected ulong GetUInt64Attribute(string name)
         {
-            return ulong.Parse(this.GetStringAttribute(name), (IFormatProvider)CultureInfo.InvariantCulture);
+            return ulong.Parse(this.GetStringAttribute(name), CultureInfo.InvariantCulture);
         }
 
     
         protected short GetInt16Attribute(string name)
         {
-            return short.Parse(this.GetStringAttribute(name), (IFormatProvider)CultureInfo.InvariantCulture);
+            return short.Parse(this.GetStringAttribute(name), CultureInfo.InvariantCulture);
         }
 
     
         protected ushort GetUInt16Attribute(string name)
         {
-            return ushort.Parse(this.GetStringAttribute(name), (IFormatProvider)CultureInfo.InvariantCulture);
+            return ushort.Parse(this.GetStringAttribute(name), CultureInfo.InvariantCulture);
         }
 
     
         protected byte GetByteAttribute(string name)
         {
-            return byte.Parse(this.GetStringAttribute(name), (IFormatProvider)CultureInfo.InvariantCulture);
+            return byte.Parse(this.GetStringAttribute(name), CultureInfo.InvariantCulture);
         }
 
     
         protected sbyte GetSByteAttribute(string name)
         {
-            return sbyte.Parse(this.GetStringAttribute(name), (IFormatProvider)CultureInfo.InvariantCulture);
+            return sbyte.Parse(this.GetStringAttribute(name), CultureInfo.InvariantCulture);
         }
 
     
         protected float GetFloatAttribute(string name)
         {
-            return float.Parse(this.GetStringAttribute(name), (IFormatProvider)CultureInfo.InvariantCulture);
+            return float.Parse(this.GetStringAttribute(name), CultureInfo.InvariantCulture);
         }
 
     
         protected double GetDoubleAttribute(string name)
         {
-            return double.Parse(this.GetStringAttribute(name), (IFormatProvider)CultureInfo.InvariantCulture);
+            return double.Parse(this.GetStringAttribute(name), CultureInfo.InvariantCulture);
         }
 
     
         protected Decimal GetDecimalAttribute(string name)
         {
-            return Decimal.Parse(this.GetStringAttribute(name), (IFormatProvider)CultureInfo.InvariantCulture);
+            return Decimal.Parse(this.GetStringAttribute(name), CultureInfo.InvariantCulture);
         }
 
     
         protected DateTime GetDateTimeAttribute(string name)
         {
-            return DateTime.Parse(this.GetStringAttribute(name), (IFormatProvider)CultureInfo.InvariantCulture);
+            return DateTime.Parse(this.GetStringAttribute(name), CultureInfo.InvariantCulture);
         }
 
     
@@ -154,11 +148,11 @@ namespace SmartQuant.Xml
     
         protected void SetAttribute(string name, string value)
         {
-            XmlAttribute node = this.zDS78RZMS.Attributes[name];
+            XmlAttribute node = this.xmlNode.Attributes[name];
             if (node == null)
             {
-                node = this.zDS78RZMS.OwnerDocument.CreateAttribute(name);
-                this.zDS78RZMS.Attributes.Append(node);
+                node = this.xmlNode.OwnerDocument.CreateAttribute(name);
+                this.xmlNode.Attributes.Append(node);
             }
             node.Value = value;
         }
@@ -166,73 +160,73 @@ namespace SmartQuant.Xml
     
         protected void SetAttribute(string name, int value)
         {
-            this.SetAttribute(name, value.ToString((IFormatProvider)CultureInfo.InvariantCulture));
+            this.SetAttribute(name, value.ToString(CultureInfo.InvariantCulture));
         }
 
     
         protected void SetAttribute(string name, uint value)
         {
-            this.SetAttribute(name, value.ToString((IFormatProvider)CultureInfo.InvariantCulture));
+            this.SetAttribute(name, value.ToString(CultureInfo.InvariantCulture));
         }
 
     
         protected void SetAttribute(string name, long value)
         {
-            this.SetAttribute(name, value.ToString((IFormatProvider)CultureInfo.InvariantCulture));
+            this.SetAttribute(name, value.ToString(CultureInfo.InvariantCulture));
         }
 
     
         protected void SetAttribute(string name, ulong value)
         {
-            this.SetAttribute(name, value.ToString((IFormatProvider)CultureInfo.InvariantCulture));
+            this.SetAttribute(name, value.ToString(CultureInfo.InvariantCulture));
         }
 
     
         protected void SetAttribute(string name, short value)
         {
-            this.SetAttribute(name, value.ToString((IFormatProvider)CultureInfo.InvariantCulture));
+            this.SetAttribute(name, value.ToString(CultureInfo.InvariantCulture));
         }
 
     
         protected void SetAttribute(string name, ushort value)
         {
-            this.SetAttribute(name, value.ToString((IFormatProvider)CultureInfo.InvariantCulture));
+            this.SetAttribute(name, value.ToString(CultureInfo.InvariantCulture));
         }
 
     
         protected void SetAttribute(string name, byte value)
         {
-            this.SetAttribute(name, value.ToString((IFormatProvider)CultureInfo.InvariantCulture));
+            this.SetAttribute(name, value.ToString(CultureInfo.InvariantCulture));
         }
 
     
         protected void SetAttribute(string name, sbyte value)
         {
-            this.SetAttribute(name, value.ToString((IFormatProvider)CultureInfo.InvariantCulture));
+            this.SetAttribute(name, value.ToString(CultureInfo.InvariantCulture));
         }
 
     
         protected void SetAttribute(string name, float value)
         {
-            this.SetAttribute(name, value.ToString((IFormatProvider)CultureInfo.InvariantCulture));
+            this.SetAttribute(name, value.ToString(CultureInfo.InvariantCulture));
         }
 
     
         protected void SetAttribute(string name, double value)
         {
-            this.SetAttribute(name, value.ToString((IFormatProvider)CultureInfo.InvariantCulture));
+            this.SetAttribute(name, value.ToString(CultureInfo.InvariantCulture));
         }
 
     
         protected void SetAttribute(string name, Decimal value)
         {
-            this.SetAttribute(name, value.ToString((IFormatProvider)CultureInfo.InvariantCulture));
+            this.SetAttribute(name, value.ToString(CultureInfo.InvariantCulture));
         }
 
     
         protected void SetAttribute(string name, DateTime value)
         {
-            this.SetAttribute(name, value.ToString((IFormatProvider)CultureInfo.InvariantCulture));
+            this.SetAttribute(name, value.ToString(CultureInfo.InvariantCulture));
         }
 
     
@@ -253,32 +247,32 @@ namespace SmartQuant.Xml
             if (value.Assembly.GlobalAssemblyCache)
                 this.SetAttribute(name, value.AssemblyQualifiedName);
             else
-                this.SetAttribute(name, string.Format(Vau4EkONyhQVGwxidg.hrqvXeKlE(0), (object)value.FullName, (object)value.Assembly.GetName().Name));
+                this.SetAttribute(name, string.Format("{0}, {1}", value.FullName, value.Assembly.GetName().Name));
         }
 
     
         protected void SetAttribute(string name, Guid value)
         {
-            this.SetAttribute(name, value.ToString((string)null, (IFormatProvider)CultureInfo.InvariantCulture));
+            this.SetAttribute(name, value.ToString(null, CultureInfo.InvariantCulture));
         }
 
     
         protected string GetStringValue()
         {
-            return this.zDS78RZMS.InnerText;
+            return this.xmlNode.InnerText;
         }
 
     
         protected int GetInt32Value()
         {
-            return int.Parse(this.GetStringValue(), (IFormatProvider)CultureInfo.InvariantCulture);
+            return int.Parse(this.GetStringValue(), CultureInfo.InvariantCulture);
         }
 
     
         protected int GetInt32Value(int defaultValue)
         {
             int result;
-            if (int.TryParse(this.GetStringValue(), NumberStyles.Integer, (IFormatProvider)CultureInfo.InvariantCulture, out result))
+            if (int.TryParse(this.GetStringValue(), NumberStyles.Integer, CultureInfo.InvariantCulture, out result))
                 return result;
             else
                 return defaultValue;
@@ -287,14 +281,14 @@ namespace SmartQuant.Xml
     
         protected uint GetUInt32Value()
         {
-            return uint.Parse(this.GetStringValue(), (IFormatProvider)CultureInfo.InvariantCulture);
+            return uint.Parse(this.GetStringValue(), CultureInfo.InvariantCulture);
         }
 
     
         protected uint GetUInt32Value(uint defaultValue)
         {
             uint result;
-            if (uint.TryParse(this.GetStringValue(), NumberStyles.Integer, (IFormatProvider)CultureInfo.InvariantCulture, out result))
+            if (uint.TryParse(this.GetStringValue(), NumberStyles.Integer, CultureInfo.InvariantCulture, out result))
                 return result;
             else
                 return defaultValue;
@@ -303,14 +297,14 @@ namespace SmartQuant.Xml
     
         protected long GetInt64Value()
         {
-            return long.Parse(this.GetStringValue(), (IFormatProvider)CultureInfo.InvariantCulture);
+            return long.Parse(this.GetStringValue(), CultureInfo.InvariantCulture);
         }
 
     
         protected long GetInt64Value(long defaultValue)
         {
             long result;
-            if (long.TryParse(this.GetStringValue(), NumberStyles.Integer, (IFormatProvider)CultureInfo.InvariantCulture, out result))
+            if (long.TryParse(this.GetStringValue(), NumberStyles.Integer, CultureInfo.InvariantCulture, out result))
                 return result;
             else
                 return defaultValue;
@@ -319,14 +313,14 @@ namespace SmartQuant.Xml
     
         protected ulong GetUInt64Value()
         {
-            return ulong.Parse(this.GetStringValue(), (IFormatProvider)CultureInfo.InvariantCulture);
+            return ulong.Parse(this.GetStringValue(), CultureInfo.InvariantCulture);
         }
 
     
         protected ulong GetUInt64Value(ulong defaultValue)
         {
             ulong result;
-            if (ulong.TryParse(this.GetStringValue(), NumberStyles.Integer, (IFormatProvider)CultureInfo.InvariantCulture, out result))
+            if (ulong.TryParse(this.GetStringValue(), NumberStyles.Integer, CultureInfo.InvariantCulture, out result))
                 return result;
             else
                 return defaultValue;
@@ -335,14 +329,14 @@ namespace SmartQuant.Xml
     
         protected short GetInt16Value()
         {
-            return short.Parse(this.GetStringValue(), (IFormatProvider)CultureInfo.InvariantCulture);
+            return short.Parse(this.GetStringValue(), CultureInfo.InvariantCulture);
         }
 
     
         protected short GetInt16Value(short defaultValue)
         {
             short result;
-            if (short.TryParse(this.GetStringValue(), NumberStyles.Integer, (IFormatProvider)CultureInfo.InvariantCulture, out result))
+            if (short.TryParse(this.GetStringValue(), NumberStyles.Integer, CultureInfo.InvariantCulture, out result))
                 return result;
             else
                 return defaultValue;
@@ -351,14 +345,14 @@ namespace SmartQuant.Xml
     
         protected ushort GetUInt16Value()
         {
-            return ushort.Parse(this.GetStringValue(), (IFormatProvider)CultureInfo.InvariantCulture);
+            return ushort.Parse(this.GetStringValue(), CultureInfo.InvariantCulture);
         }
 
     
         protected ushort GetUInt16Value(ushort defaultValue)
         {
             ushort result;
-            if (ushort.TryParse(this.GetStringValue(), NumberStyles.Integer, (IFormatProvider)CultureInfo.InvariantCulture, out result))
+            if (ushort.TryParse(this.GetStringValue(), NumberStyles.Integer, CultureInfo.InvariantCulture, out result))
                 return result;
             else
                 return defaultValue;
@@ -367,14 +361,14 @@ namespace SmartQuant.Xml
     
         protected byte GetByteValue()
         {
-            return byte.Parse(this.GetStringValue(), (IFormatProvider)CultureInfo.InvariantCulture);
+            return byte.Parse(this.GetStringValue(), CultureInfo.InvariantCulture);
         }
 
     
         protected byte GetByteValue(byte defaultValue)
         {
             byte result;
-            if (byte.TryParse(this.GetStringValue(), NumberStyles.Integer, (IFormatProvider)CultureInfo.InvariantCulture, out result))
+            if (byte.TryParse(this.GetStringValue(), NumberStyles.Integer, CultureInfo.InvariantCulture, out result))
                 return result;
             else
                 return defaultValue;
@@ -383,14 +377,14 @@ namespace SmartQuant.Xml
     
         protected sbyte GetSByteValue()
         {
-            return sbyte.Parse(this.GetStringValue(), (IFormatProvider)CultureInfo.InvariantCulture);
+            return sbyte.Parse(this.GetStringValue(), CultureInfo.InvariantCulture);
         }
 
     
         protected sbyte GetSByteValue(sbyte defaultValue)
         {
             sbyte result;
-            if (sbyte.TryParse(this.GetStringValue(), NumberStyles.Integer, (IFormatProvider)CultureInfo.InvariantCulture, out result))
+            if (sbyte.TryParse(this.GetStringValue(), NumberStyles.Integer, CultureInfo.InvariantCulture, out result))
                 return result;
             else
                 return defaultValue;
@@ -399,14 +393,14 @@ namespace SmartQuant.Xml
     
         protected float GetFloatValue()
         {
-            return float.Parse(this.GetStringValue(), (IFormatProvider)CultureInfo.InvariantCulture);
+            return float.Parse(this.GetStringValue(), CultureInfo.InvariantCulture);
         }
 
     
         protected float GetFloatValue(float defaultValue)
         {
             float result;
-            if (float.TryParse(this.GetStringValue(), NumberStyles.Float | NumberStyles.AllowThousands, (IFormatProvider)CultureInfo.InvariantCulture, out result))
+            if (float.TryParse(this.GetStringValue(), NumberStyles.Float | NumberStyles.AllowThousands, CultureInfo.InvariantCulture, out result))
                 return result;
             else
                 return defaultValue;
@@ -415,14 +409,14 @@ namespace SmartQuant.Xml
     
         protected double GetDoubleValue()
         {
-            return double.Parse(this.GetStringValue(), (IFormatProvider)CultureInfo.InvariantCulture);
+            return double.Parse(this.GetStringValue(), CultureInfo.InvariantCulture);
         }
 
     
         protected double GetDoubleValue(double defaultValue)
         {
             double result;
-            if (double.TryParse(this.GetStringValue(), NumberStyles.Float | NumberStyles.AllowThousands, (IFormatProvider)CultureInfo.InvariantCulture, out result))
+            if (double.TryParse(this.GetStringValue(), NumberStyles.Float | NumberStyles.AllowThousands, CultureInfo.InvariantCulture, out result))
                 return result;
             else
                 return defaultValue;
@@ -431,14 +425,14 @@ namespace SmartQuant.Xml
     
         protected Decimal GetDecimalValue()
         {
-            return Decimal.Parse(this.GetStringValue(), (IFormatProvider)CultureInfo.InvariantCulture);
+            return Decimal.Parse(this.GetStringValue(), CultureInfo.InvariantCulture);
         }
 
     
         protected Decimal GetDecimalValue(Decimal defaultValue)
         {
             Decimal result;
-            if (Decimal.TryParse(this.GetStringValue(), NumberStyles.Number, (IFormatProvider)CultureInfo.InvariantCulture, out result))
+            if (Decimal.TryParse(this.GetStringValue(), NumberStyles.Number, CultureInfo.InvariantCulture, out result))
                 return result;
             else
                 return defaultValue;
@@ -447,14 +441,14 @@ namespace SmartQuant.Xml
     
         protected DateTime GetDateTimeValue()
         {
-            return DateTime.Parse(this.GetStringValue(), (IFormatProvider)CultureInfo.InvariantCulture);
+            return DateTime.Parse(this.GetStringValue(), CultureInfo.InvariantCulture);
         }
 
     
         protected DateTime GetDateTimeValue(DateTime defaultValue)
         {
             DateTime result;
-            if (DateTime.TryParse(this.GetStringValue(), (IFormatProvider)CultureInfo.InvariantCulture, DateTimeStyles.None, out result))
+            if (DateTime.TryParse(this.GetStringValue(), CultureInfo.InvariantCulture, DateTimeStyles.None, out result))
                 return result;
             else
                 return defaultValue;
@@ -517,7 +511,7 @@ namespace SmartQuant.Xml
     
         protected void SetValue(string value)
         {
-            this.zDS78RZMS.InnerText = value;
+            this.xmlNode.InnerText = value;
         }
 
     
@@ -571,25 +565,25 @@ namespace SmartQuant.Xml
     
         protected void SetValue(double value)
         {
-            this.SetValue(value.ToString((IFormatProvider)CultureInfo.InvariantCulture));
+            this.SetValue(value.ToString(CultureInfo.InvariantCulture));
         }
 
     
         protected void SetValue(float value)
         {
-            this.SetValue(value.ToString((IFormatProvider)CultureInfo.InvariantCulture));
+            this.SetValue(value.ToString(CultureInfo.InvariantCulture));
         }
 
     
         protected void SetValue(Decimal value)
         {
-            this.SetValue(value.ToString((IFormatProvider)CultureInfo.InvariantCulture));
+            this.SetValue(value.ToString(CultureInfo.InvariantCulture));
         }
 
     
         protected void SetValue(DateTime value)
         {
-            this.SetValue(value.ToString((IFormatProvider)CultureInfo.InvariantCulture));
+            this.SetValue(value.ToString(CultureInfo.InvariantCulture));
         }
 
     
@@ -610,13 +604,13 @@ namespace SmartQuant.Xml
             if (value.Assembly.GlobalAssemblyCache)
                 this.SetValue(value.AssemblyQualifiedName);
             else
-                this.SetValue(string.Format(Vau4EkONyhQVGwxidg.hrqvXeKlE(20), (object)value.FullName, (object)value.Assembly.GetName().Name));
+                this.SetValue(string.Format("{0}, {1}", value.FullName, value.Assembly.GetName().Name));
         }
 
     
         protected void SetValue(Guid value)
         {
-            this.SetValue(value.ToString((string)null, (IFormatProvider)CultureInfo.InvariantCulture));
+            this.SetValue(value.ToString(null, CultureInfo.InvariantCulture));
         }
 
     
@@ -624,7 +618,7 @@ namespace SmartQuant.Xml
         {
             string nodeName = Activator.CreateInstance<T>().NodeName;
             List<T> list = new List<T>();
-            foreach (XmlNode xmlNode in this.zDS78RZMS)
+            foreach (XmlNode xmlNode in this.xmlNode)
             {
                 if (xmlNode.Name == nodeName)
                     list.Add(XmlNodeBase.cg2X6kuxg<T>(xmlNode));
@@ -636,7 +630,7 @@ namespace SmartQuant.Xml
         protected T GetChildNode<T>() where T : XmlNodeBase, new()
         {
             string nodeName = Activator.CreateInstance<T>().NodeName;
-            foreach (XmlNode xmlNode in this.zDS78RZMS)
+            foreach (XmlNode xmlNode in this.xmlNode)
             {
                 if (xmlNode.Name == nodeName)
                     return XmlNodeBase.cg2X6kuxg<T>(xmlNode);
@@ -647,7 +641,7 @@ namespace SmartQuant.Xml
     
         protected T GetChildNode<T>(string name) where T : ValueXmlNode, new()
         {
-            foreach (XmlNode xmlNode in this.zDS78RZMS)
+            foreach (XmlNode xmlNode in this.xmlNode)
             {
                 if (xmlNode.Name == name)
                     return XmlNodeBase.fpeCaawxg<T>(xmlNode, name);
@@ -658,16 +652,16 @@ namespace SmartQuant.Xml
     
         protected T AppendChildNode<T>() where T : XmlNodeBase, new()
         {
-            T obj = XmlNodeBase.cg2X6kuxg<T>((XmlNode)this.zDS78RZMS.OwnerDocument.CreateElement(Activator.CreateInstance<T>().NodeName));
-            this.zDS78RZMS.AppendChild((XmlNode)((XmlNodeBase)obj));
+            T obj = XmlNodeBase.cg2X6kuxg<T>((XmlNode)this.xmlNode.OwnerDocument.CreateElement(Activator.CreateInstance<T>().NodeName));
+            this.xmlNode.AppendChild((XmlNode)((XmlNodeBase)obj));
             return obj;
         }
 
     
         protected T AppendChildNode<T>(string name) where T : ValueXmlNode, new()
         {
-            T obj = XmlNodeBase.cg2X6kuxg<T>((XmlNode)this.zDS78RZMS.OwnerDocument.CreateElement(name));
-            this.zDS78RZMS.AppendChild((XmlNode)((XmlNodeBase)obj));
+            T obj = XmlNodeBase.cg2X6kuxg<T>((XmlNode)this.xmlNode.OwnerDocument.CreateElement(name));
+            this.xmlNode.AppendChild((XmlNode)((XmlNodeBase)obj));
             return obj;
         }
 

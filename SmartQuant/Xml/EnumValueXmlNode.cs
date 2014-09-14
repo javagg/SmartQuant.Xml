@@ -14,10 +14,6 @@
             }
         }
 
-        public EnumValueXmlNode()
-        {
-        }
-    
         public T GetValue(T defaultValue)
         {
             return this.GetEnumValue<T>(defaultValue);

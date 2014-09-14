@@ -14,10 +14,6 @@
             }
         }
 
-        public FloatValueXmlNode()
-        {
-        }
-    
         public float GetValue(float defaultValue)
         {
             return this.GetFloatValue(defaultValue);

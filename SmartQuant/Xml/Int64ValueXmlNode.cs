@@ -14,10 +14,6 @@
             }
         }
 
-        public Int64ValueXmlNode()
-        {
-        }
-
         public long GetValue(long defaultValue)
         {
             return this.GetInt64Value(defaultValue);

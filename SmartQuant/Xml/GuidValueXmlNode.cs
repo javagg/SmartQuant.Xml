@@ -15,11 +15,7 @@ namespace SmartQuant.Xml
                 this.SetValue(value);
             }
         }
-    
-        public GuidValueXmlNode()
-        {
-        }
-    
+
         public Guid GetValue(Guid defaultValue)
         {
             return this.GetGuidValue(defaultValue);

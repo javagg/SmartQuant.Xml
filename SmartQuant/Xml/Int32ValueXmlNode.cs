@@ -13,10 +13,6 @@
                 this.SetValue(value);
             }
         }
-    
-        public Int32ValueXmlNode()
-        {
-        }
 
         public int GetValue(int defaultValue)
         {

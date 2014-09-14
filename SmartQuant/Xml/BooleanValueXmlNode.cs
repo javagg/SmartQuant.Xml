@@ -13,10 +13,6 @@
                 this.SetValue(value);
             }
         }
-    
-        public BooleanValueXmlNode()
-        {
-        }
 
         public bool GetValue(bool defaultValue)
         {

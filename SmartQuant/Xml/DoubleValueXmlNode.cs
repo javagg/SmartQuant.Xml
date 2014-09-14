@@ -13,10 +13,6 @@
                 this.SetValue(value);
             }
         }
-    
-        public DoubleValueXmlNode()
-        {
-        }
 
         public double GetValue(double defaultValue)
         {

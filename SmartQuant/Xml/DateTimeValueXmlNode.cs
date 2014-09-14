@@ -16,10 +16,6 @@ namespace SmartQuant.Xml
             }
         }
 
-        public DateTimeValueXmlNode()
-        {
-        }
-
         public DateTime GetValue(DateTime defaultValue)
         {
             return this.GetDateTimeValue(defaultValue);

@@ -16,10 +16,6 @@ namespace SmartQuant.Xml
             }
         }
 
-        public DecimalValueXmlNode()
-        {
-        }
-    
         public Decimal GetValue(Decimal defaultValue)
         {
             return this.GetDecimalValue(defaultValue);
